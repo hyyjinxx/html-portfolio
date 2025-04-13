@@ -1,7 +1,6 @@
 let hasDownloadedResume = false;
 let downloadCount = 0; 
 
-
 document.querySelector('.resume').addEventListener('click', function() {
     if (!hasDownloadedResume) {
        
@@ -41,3 +40,9 @@ function daysUntilDeadline(deadline) {
 
 const projectDeadline = "2025-06-30";
 console.log("Days until project deadline: " + daysUntilDeadline(projectDeadline));
+
+// Wait until the page is fully loaded
+window.addEventListener('load', function() {
+    const spinner = document.getElementById('spinner');
+    spinner.style.display = 'none'; // Hide the spinner once content is loaded
+});
